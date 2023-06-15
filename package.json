@@ -1,0 +1,23 @@
+{
+  "name": "com.yannickscf.countries-data",
+  "version": "0.0.1",
+  "displayName": "Yannick - Countries Data",
+  "description": "Storage for basic Countries data",
+  "unity": "2021.3",
+  "unityRelease": "0b5",
+  "dependencies": {
+    "com.unity.localization": "1.3.2"
+ },
+  "author": {
+    "name": "Yannick Santa Cruz Feuillias",
+    "email": "yannickscf@gmail.com",
+    "url": "https://github.com/YannickSCF"
+  },
+  "samples": [
+    {
+      "displayName": "Complete database",
+      "description": "Contains complete countries database",
+      "path": "Samples/Complete Database"
+    }
+  ]
+}
