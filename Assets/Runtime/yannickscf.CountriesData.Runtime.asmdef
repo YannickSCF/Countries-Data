@@ -1,7 +1,9 @@
 {
-    "name": "yanickscf.Editor",
+    "name": "yannickscf.CountriesData.Runtime",
     "rootNamespace": "",
-    "references": [],
+    "references": [
+        "yannickscf.Runtime.GeneralApp"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
