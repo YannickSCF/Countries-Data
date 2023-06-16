@@ -12,9 +12,9 @@ using UnityEngine;
 using UnityEditor;
 #endif
 /// Custom Dependencies
-using YannickSCF.GeneralApp.CountriesData.Objects;
+using YannickSCF.CountriesData.Objects;
 
-namespace YannickSCF.GeneralApp.CountriesData.Editor {
+namespace YannickSCF.CountriesData.Editor {
     public class CustomCountryDataListAttribute : PropertyAttribute {
         public string methodName;
         public CustomCountryDataListAttribute(string methodNameNoArguments) {

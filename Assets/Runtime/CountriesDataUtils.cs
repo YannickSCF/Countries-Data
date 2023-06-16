@@ -7,7 +7,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace YannickSCF.GeneralApp.CountriesData {
+namespace YannickSCF.CountriesData {
     public static class CountriesDataUtils {
 
         private static CountriesDataList _data;

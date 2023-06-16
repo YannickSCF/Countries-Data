@@ -1,7 +1,9 @@
 {
     "name": "yannickscf.CountriesData.Editor",
     "rootNamespace": "",
-    "references": [],
+    "references": [
+        "GUID:dd83a52cc92df7b4e9f33c5bf48c5e64"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

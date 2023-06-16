@@ -6,7 +6,7 @@
 /// Dependencies
 using UnityEngine;
 
-namespace YannickSCF.GeneralApp.CountriesData.Objects {
+namespace YannickSCF.CountriesData.Objects {
     [System.Serializable]
     public class CountryNameTranslations {
 

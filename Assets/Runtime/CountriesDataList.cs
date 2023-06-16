@@ -8,10 +8,10 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 /// Custom Dependencies
-using YannickSCF.GeneralApp.CountriesData.Editor;
-using YannickSCF.GeneralApp.CountriesData.Objects;
+using YannickSCF.CountriesData.Editor;
+using YannickSCF.CountriesData.Objects;
 
-namespace YannickSCF.GeneralApp.CountriesData {
+namespace YannickSCF.CountriesData {
     public enum Language { EN, ES, IT, FR }
 
     [CreateAssetMenu(fileName = "Country Data List", menuName = "Scriptable Objects/YannickSCF/Country Data List", order = 0)]
