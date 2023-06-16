@@ -1,7 +1,9 @@
 {
-    "name": "yannickscf.GeneralApp.CountriesData",
+    "name": "yannickscf.GeneralApp.CountriesData.Runtime",
     "rootNamespace": "",
-    "references": [],
+    "references": [
+        "GUID:0001ebb3ba6522743a751f95efec694e"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
