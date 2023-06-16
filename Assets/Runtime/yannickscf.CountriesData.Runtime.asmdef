@@ -2,7 +2,7 @@
     "name": "yannickscf.CountriesData.Runtime",
     "rootNamespace": "",
     "references": [
-        "GUID:0001ebb3ba6522743a751f95efec694e"
+        "yannickscf.CountriesData.Editor"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
