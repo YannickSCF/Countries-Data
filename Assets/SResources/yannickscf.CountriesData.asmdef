@@ -1,5 +1,5 @@
 {
-    "name": "yannickscf.CountriesData.Runtime",
+    "name": "yannickscf.CountriesData",
     "rootNamespace": "",
     "references": [
         "yannickscf.CountriesData.Editor"
