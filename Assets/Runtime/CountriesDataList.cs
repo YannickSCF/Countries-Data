@@ -37,8 +37,25 @@ namespace YannickSCF.CountriesData {
             return null;
         }
 
+        public Sprite GetFlagByLongCode(string longCode) {
+            CountryData res = GetCountryDataByLongCode(longCode);
+
+            if (res != null) return res.CountryFlag;
+            return null;
+        }
+
         public string GetNameByCode(string code, SystemLanguage? language = null) {
             CountryData res = GetCountryDataByCode(code);
+
+            if (res != null) {
+                if (!language.HasValue) language = Application.systemLanguage;
+                return res.CountryName.GetTranslatedName(language.Value);
+            }
+            return null;
+        }
+
+        public string GetNameByLongCode(string longCode, SystemLanguage? language = null) {
+            CountryData res = GetCountryDataByLongCode(longCode);
 
             if (res != null) {
                 if (!language.HasValue) language = Application.systemLanguage;
@@ -56,8 +73,21 @@ namespace YannickSCF.CountriesData {
             return null;
         }
 
+        public string GetLongCodeByName(string name) {
+            CountryData res = GetCountryDataByName(name);
+
+            if (res != null) {
+                return res.LongCountryId;
+            }
+            return null;
+        }
+
         public bool IsCountryCodeInList(string code) {
             return GetCountryDataByCode(code) != null;
+        }
+
+        public bool IsCountryLongCodeInList(string longCode) {
+            return GetCountryDataByLongCode(longCode) != null;
         }
 
         public bool IsCountryNameInList(string name) {
@@ -70,6 +100,17 @@ namespace YannickSCF.CountriesData {
             List<CountryData> allMatches = _allCountries.Where(x => x.CountryId.Contains(code, System.StringComparison.InvariantCultureIgnoreCase)).ToList();
             foreach (CountryData data in allMatches) {
                 res.Add(data.CountryId, data.CountryFlag);
+            }
+
+            return res;
+        }
+
+        public Dictionary<string, Sprite> SearchCountriesByLongCode(string longCode) {
+            Dictionary<string, Sprite> res = new Dictionary<string, Sprite>();
+
+            List<CountryData> allMatches = _allCountries.Where(x => x.LongCountryId.Contains(longCode, System.StringComparison.InvariantCultureIgnoreCase)).ToList();
+            foreach (CountryData data in allMatches) {
+                res.Add(data.LongCountryId, data.CountryFlag);
             }
 
             return res;
@@ -97,6 +138,15 @@ namespace YannickSCF.CountriesData {
             }
 
             return _allCountries.FirstOrDefault(x => x.CountryId.Equals(code, System.StringComparison.InvariantCultureIgnoreCase));
+        }
+
+        private CountryData GetCountryDataByLongCode(string longCode) {
+            if (string.IsNullOrEmpty(longCode) || longCode.Length != 3) {
+                Debug.LogError("Country long code wrong length!");
+                return null;
+            }
+
+            return _allCountries.FirstOrDefault(x => x.LongCountryId.Equals(longCode, System.StringComparison.InvariantCultureIgnoreCase));
         }
     }
 }
