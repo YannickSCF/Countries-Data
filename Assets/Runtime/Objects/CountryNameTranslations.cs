@@ -96,9 +96,5 @@ namespace YannickSCF.CountriesData.Objects {
                     return false;
             }
         }
-
-        public void Mirame() {
-
-        }
     }
 }
